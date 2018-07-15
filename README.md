@@ -1,6 +1,6 @@
 # Node sample
 
-Fork of a sample node microservice block for [kintohub](http://kintohub.com)
+This is a fork of a sample node microservice block for [kintohub](http://kintohub.com)
 
 
 # First time setup
