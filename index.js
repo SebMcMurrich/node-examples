@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || '8000'
+const axios = require('axios');
 
 
 /**
@@ -14,5 +15,15 @@ app.get('/hello/:name', (req, res) =>
     message: `Hello ${req.params.name}`
   })
 )
+
+app.get('/nasa', (req, res) => {
+  axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    .then(response => {
+      res.send(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`))

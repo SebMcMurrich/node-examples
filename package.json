@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/kintohub/node-example#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "express": "^4.16.3",
-    "npm": "^6.2.0"
+    "npm": "^6.3.0"
   }
 }
