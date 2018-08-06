@@ -16,6 +16,11 @@ app.get('/hello/:name', (req, res) =>
   })
 )
 
+/**
+ * @api {get} /nasa Returns NASA’s Astronomy Picture of the Day
+ * @apiName Nasa
+ * @apiSuccess (200) {Json} nasa API Json object
+ */
 app.get('/nasa', (req, res) => {
   axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
     .then(response => {
